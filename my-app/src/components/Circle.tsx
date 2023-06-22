@@ -1,12 +1,11 @@
 import { FC } from "react";
+import { BoxProps } from "./Box";
 
-export interface BoxProps {
-    color: string;
-    width: number;
-    height: number;
+interface CircleProps extends BoxProps {
+    radius: number;
 }
 
-const Box: FC<BoxProps> = ({ color, width, height }) => {
+const Circle: FC<CircleProps> = ({ color, width, height, radius }) => {
     return (
         <div
             style={{
@@ -14,9 +13,10 @@ const Box: FC<BoxProps> = ({ color, width, height }) => {
                 width,
                 height,
                 margin: 40,
+                borderRadius: radius,
             }}
         ></div>
     );
 };
 
-export default Box;
+export default Circle;
