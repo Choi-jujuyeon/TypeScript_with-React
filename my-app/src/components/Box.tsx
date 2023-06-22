@@ -1,12 +1,18 @@
 import { FC } from "react";
 
-const Box: FC = () => {
+interface BoxProps {
+    color: string;
+    width: number;
+    height: number;
+}
+
+const Box: FC<BoxProps> = ({ color, width, height }) => {
     return (
         <div
             style={{
-                backgroundColor: "pink",
-                width: 400,
-                height: 400,
+                backgroundColor: color,
+                width,
+                height,
                 margin: 40,
             }}
         ></div>
