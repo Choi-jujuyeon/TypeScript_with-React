@@ -1,7 +1,14 @@
 import { FC } from "react";
 
+export enum Color {
+    Pink = "pink",
+    Red = "red",
+    Blue = "blue",
+    Green = "green",
+}
+
 export interface BoxProps {
-    color: string;
+    color: Color;
     width: number;
     height?: number;
 }
